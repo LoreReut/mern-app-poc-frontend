@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch, Link } from 'react-ro
 import Users from './users/pages/Users';
 import NewPlace from './places/pages/NewPlace';
 import MainNavigation from './shared/navigation/MainNavigation'
+import UserPlaces from './places/pages/UserPlaces';
 
 const App = () => {
   return <Router>
@@ -18,8 +19,8 @@ const App = () => {
       <Route path="/places/new" exact>
         <NewPlace />
       </Route>
-      <Route path="/places/id" exact>
-        
+      <Route path="/:uid/places" exact>
+        <UserPlaces/>
       </Route>
       <Redirect to="/"/>
     </Switch>

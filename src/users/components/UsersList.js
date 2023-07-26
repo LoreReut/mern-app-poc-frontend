@@ -7,12 +7,11 @@ import Card from '../../shared/components/ui-elements/card/Card'
 const UsersList = props => {
     if (props.items.length === 0) {
         return (<Card>
-            <h2>No users found.</h2>
+            <div style={{display:'inline-block'}}><h2>No users found.</h2></div>
             </Card>);
     }
 
-    return (
-        <ul className="users-list">
+    return <ul className="users-list">
             {props.items.map(user => 
             <UserItem           
                 key={user.id} 
@@ -21,8 +20,7 @@ const UsersList = props => {
                 name={user.name} 
                 placeCount={user.placeCount}
             />)}
-        </ul>
-    );
+        </ul>;
 }
 
 export default UsersList;
