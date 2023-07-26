@@ -1,6 +1,7 @@
 import React from 'react';
 import './PlaceList.css';
 import PlaceItem from './PlaceItem';
+import Card from '../../shared/components/ui-elements/card/Card';
 
 const PlaceList = (props) => {
     if (props.items.length === 0){
@@ -14,7 +15,9 @@ const PlaceList = (props) => {
 
     return <ul className="place-list">
         {props.items.map(place => {
-            <li className="place-item"><PlaceItem key={place.id} id={place.id} image={place.imageUrl} title={place.title} description={place.description} address={place.address} creatorId={place.creatorId} coordinates={place.coordinates}/></li>
+            return <>
+                <li className="place-item"><PlaceItem key={place.id} id={place.id} imageUrl={place.imageUrl} title={place.title} description={place.description} address={place.address} creatorId={place.creatorId} coordinates={place.coordinates}/></li>
+            </>
         })}
     </ul>
 }
