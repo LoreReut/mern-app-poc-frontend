@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Button.css';
 
 const Button = props => {
+  {/*props.href will return true if there is a value in that attribute. If there isn't, it checks whether the to attribute, and if there isn't, it means it has an onClick value */}
   if (props.href) {
     return (
       <a

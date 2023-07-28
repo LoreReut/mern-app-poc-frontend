@@ -8,6 +8,7 @@ const UserItem = props => {
     return (
         <li className="user-item">
             <Card className="user-item__content">
+                {/*props.id will be picked up by :uid in App.js */}
                 <Link to={`/${props.id}/places`}>
                 <div className="user-item__image">
                     <Avatar image={props.image} alt={props.alt}/>
