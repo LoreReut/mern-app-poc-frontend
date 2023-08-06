@@ -6,15 +6,13 @@ import MainNavigation from './shared/navigation/MainNavigation'
 import UserPlaces from './places/pages/UserPlaces';
 
 const App = () => {
+  {/*The route object represents referrable items with the to attribute within Link objects */}
   return <Router>
     <MainNavigation/>
     <main>
     <Switch>
       <Route path="/" exact>
         <Users />
-      </Route>
-      <Route path="/users" exact>
-        <Link to={`/users`}><h2>Henlo</h2></Link>
       </Route>
       <Route path="/places/new" exact>
         <NewPlace />
