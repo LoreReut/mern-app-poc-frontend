@@ -1,8 +1,8 @@
 import React from 'react';
 import UsersList from '../components/UsersList'
 
-const USERS = [{
-    id: 'u0', 
+const USERS = [
+    {id: 'u0', 
     name: 'Lo', 
     image: 'https://media.tenor.com/QWai-afTJb4AAAAC/graphic-design-is-my-passion-designer.gif',
     placeCount: 33},
